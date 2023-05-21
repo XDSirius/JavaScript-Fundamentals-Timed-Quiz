@@ -22,7 +22,7 @@ testQuestions =[
     },
 
     {question3:"Where is the correct place to insert a JavaScript? ",
-    answersL{
+    answers:{
     choice1 :"The <body> section",
     choice2:" Both the <head> section and the <body> section are correct",
     choice3:"The <head> section",
@@ -55,9 +55,12 @@ console.log(testQuestions);
 
 function startQuiz() {
     console.log("Starting Quiz :D ");
-    var testing = document.querySelector(".test");
+    let testing = document.querySelector(".test");
     testing.classList.remove("hide");
+    button.classList.add("hide");
     intervalId = setInterval(displayHello, 1000);
+    
+
 }
 
 
@@ -71,7 +74,13 @@ function displayHello() {
  count--;
  if (count === 0){
     clearInterval(intervalId);
+
+    
      }
+
  }
+
+ 
+
 
 
