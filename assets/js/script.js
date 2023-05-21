@@ -1,19 +1,29 @@
 console.log("File is Linked");
-var button = document.getElementById("button");
+let button = document.getElementById("button");
+
 button.addEventListener("click",startQuiz)
+
+var count = 3;
 
 function startQuiz() {
     console.log("Starting Quiz :D ");
     var testing = document.querySelector(".test");
     testing.classList.remove("hide");
-    setInterval(displayHello, 1000);
+    intervalId = setInterval(displayHello, 1000);
 }
 
 
-var count = 59;
+
+
+
 function displayHello() {
  var timer= document.getElementById("timer");
  
- timer.innerHTML =count;
+ timer.innerHTML = count;
  count--;
-}
+ if (count === 0){
+    clearInterval(intervalId);
+ }
+ }
+
+
