@@ -1,9 +1,11 @@
-console.log("File is Linked");
+
+//setting it up to have button interactive
 let button = document.getElementById("button");
-
+//button is listening for a click
 button.addEventListener("click",startQuiz)
-
-var count = 3;
+//sets count to 3
+let count = 3;
+//list of questions
 testQuestions =[
     {question1:"inside which Element do we put the JavaScript?",
     answers:{
@@ -53,12 +55,13 @@ testQuestions =[
 ]
 console.log(testQuestions);
 
+//STARTS THE QUIZ
 function startQuiz() {
     console.log("Starting Quiz :D ");
     let testing = document.querySelector(".test");
     testing.classList.remove("hide");
     button.classList.add("hide");
-    intervalId = setInterval(displayHello, 1000);
+    intervalId = setInterval(countdown, 1000);
     
 
 }
@@ -67,7 +70,8 @@ function startQuiz() {
 
 
 
-function displayHello() {
+//timer
+function countdown() {
  var timer= document.getElementById("timer");
  
  timer.innerHTML = count;
