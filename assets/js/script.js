@@ -1,6 +1,7 @@
 
 //setting it up to have button interactive
 let button = document.getElementById("button");
+let firstPage = document.getElementById("first-page")
 //button is listening for a click
 button.addEventListener("click",startQuiz)
 //sets count to 3
@@ -61,6 +62,7 @@ function startQuiz() {
     let testing = document.querySelector(".test");
     testing.classList.remove("hide");
     button.classList.add("hide");
+   firstPage.classList.add("hide");
     intervalId = setInterval(countdown, 1000);
     
 
