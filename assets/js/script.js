@@ -70,13 +70,18 @@ function startQuiz() {
     button.classList.add("hide");
     firstPage.classList.add("hide");
     intervalId = setInterval(countdown, 1000);
+    
     for (var x= 0; x <testQuestions.length;x++){
         var displayQuestion = document.createElement("h4");
         displayQuestion.innerText = testQuestions[x].question;
         testing.append(displayQuestion);
-        var displayAnswers = document.createElement("h5");
-        displayAnswers.innerText = testQuestions[x].choices;
-        testing.append(displayAnswers);
+        for (var x =0; x <testQuestion.choices[x].length; x++){
+            var displayChoices = document.createElement("BUTTON");
+            displayChoices.innerText = testQuestions[x].choices;
+            testing.append(displayChoices);
+        }
+        
+       
         
     }
 
