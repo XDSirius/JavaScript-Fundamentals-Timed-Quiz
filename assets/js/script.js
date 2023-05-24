@@ -72,7 +72,14 @@ function startQuiz() {
     firstPage.classList.add("hide");
     intervalId = setInterval(countdown, 1000);
 
+    
+    questionContainer.innerText = testQuestions[0].question;
+    choice1.innerText = testQuestions[0].choices[0];
+    choice2.innerText = testQuestions[0].choices[1];
+    choice3.innerText = testQuestions[0].choices[2];
+    choice4.innerText = testQuestions[0].choices[3];
 
+    
 
  
     
