@@ -9,49 +9,55 @@ let count = 3;
 //list of questions
 testQuestions =[
     {question:"inside which Element do we put the JavaScript?",
-    answers:[
+    choices:[
     "<script>",
     "<javascript>",
     "<js>",
-    "<scripting>" ]
+    "<scripting>" ],
+    answer:["<script>"]
     },
 
     {question:"What is the correct JavaScript syntax to change the content of the HTML element below?",
-    answers:[
+    choices:[
     "#demo.innerHTML = 'Hello World!;",
     'document.getElementsByName("p").innerHTML = "Hello World!";',
     'document.getElement("p").innerHTML = "Hello World";',
-    'document.getElementById("demo").innerHTML = "Hello World!"' ]
+    'document.getElementById("demo").innerHTML = "Hello World!"' ],
+    answer:['document.getElement("p").innerHTML = "Hello World";']
     },
 
     {question:"Where is the correct place to insert a JavaScript? ",
-    answers:[
+    choices:[
     "The <body> section",
     " Both the <head> section and the <body> section are correct",
     "The <head> section",
-    "Anywhere!" ]
+    "Anywhere!" ],
+    answer:["The <body> section"]
     },
 
     {question:"The external JavaScript file must contain the <script> tag.",
-    answers:[
+    choices:[
     "True",
-    "False"]
+    "False"],
+    answer:["False"]
     },
 
     {question:"How to write an IF statement in JavaScript?",
-    answers:[
+    choices:[
     " if x = 0 then",
     " if (x==0)",
     "if x=0",
-    "if x==0 then" ]
+    "if x==0 then" ],
+    answer:["if (x==0)"]
     },
 
     {question:"How can you add a comment in a JavaScript?",
-    answers:[
+    choices:[
     "'This is a comment",
     "//This is a comment",
     "<!--This is a comment--",
-    "All of the above" ]
+    "All of the above" ],
+    answer:["//This is a comment"]
     }
 ]
 console.log(testQuestions);
@@ -69,7 +75,7 @@ function startQuiz() {
         displayQuestion.innerText = testQuestions[x].question;
         testing.append(displayQuestion);
         var displayAnswers = document.createElement("h5");
-        displayAnswers.innerText = testQuestions[x].answers;
+        displayAnswers.innerText = testQuestions[x].choices;
         testing.append(displayAnswers);
         
     }
