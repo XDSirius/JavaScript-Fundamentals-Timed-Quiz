@@ -79,8 +79,14 @@ function startQuiz() {
     choice3.innerText = testQuestions[0].choices[2];
     choice4.innerText = testQuestions[0].choices[3];
 
-    
-
+    questionContainer.addEventListener("click",function(event){
+        if (event == testQuestions[0].question.answer) {
+            console.log("corect");
+        } else{
+            console.log("wrong");
+        }
+    });
+   
  
     
     
