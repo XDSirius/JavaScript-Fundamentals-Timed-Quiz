@@ -8,7 +8,7 @@ button.addEventListener("click",startQuiz)
 let count = 3;
 //list of questions
 testQuestions =[
-    {question1:"inside which Element do we put the JavaScript?",
+    {question:"inside which Element do we put the JavaScript?",
     answers:{
     choice1 :"<script>",
     choice2:"<javascript>",
@@ -16,7 +16,7 @@ testQuestions =[
     choice4:"<scripting>" }
     },
 
-    {question2:"What is the correct JavaScript syntax to change the content of the HTML element below?",
+    {question:"What is the correct JavaScript syntax to change the content of the HTML element below?",
     answers:{
     choice1 :"#demo.innerHTML = 'Hello World!;",
     choice2:'document.getElementsByName("p").innerHTML = "Hello World!";',
@@ -24,7 +24,7 @@ testQuestions =[
     choice4:'document.getElementById("demo").innerHTML = "Hello World!"' }
     },
 
-    {question3:"Where is the correct place to insert a JavaScript? ",
+    {question:"Where is the correct place to insert a JavaScript? ",
     answers:{
     choice1 :"The <body> section",
     choice2:" Both the <head> section and the <body> section are correct",
@@ -32,13 +32,13 @@ testQuestions =[
     choice4:"Anywhere!" }
     },
 
-    {question4:"The external JavaScript file must contain the <script> tag.",
+    {question:"The external JavaScript file must contain the <script> tag.",
     answers:{
     choice1 :"True",
     choice2:"False"}
     },
 
-    {question5:"How to write an IF statement in JavaScript?",
+    {question:"How to write an IF statement in JavaScript?",
     answers:{
     choice1:" if x = 0 then",
     choice2:" if (x==0)",
@@ -46,7 +46,7 @@ testQuestions =[
     choice4:"if x==0 then" }
     },
 
-    {question6:"How can you add a comment in a JavaScript?",
+    {question:"How can you add a comment in a JavaScript?",
     answers:{
     choice1 :"'This is a comment",
     choice2:"//This is a comment",
@@ -62,8 +62,16 @@ function startQuiz() {
     let testing = document.querySelector(".test");
     testing.classList.remove("hide");
     button.classList.add("hide");
-   firstPage.classList.add("hide");
+    firstPage.classList.add("hide");
     intervalId = setInterval(countdown, 1000);
+    for (var x= 0; x <testQuestions.length;x++){
+        var displayQuestion = document.createElement("h4");
+        displayQuestion.innerText = testQuestions[x].question;
+        testing.append(displayQuestion);
+        
+    }
+
+    
     
 
 }
@@ -86,6 +94,10 @@ function countdown() {
 
  }
 
+ //function to display questions and answers
+
+
+    
  
 
 
