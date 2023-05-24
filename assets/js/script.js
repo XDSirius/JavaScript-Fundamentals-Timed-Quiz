@@ -35,13 +35,6 @@ testQuestions =[
     answer:["The <body> section"]
     },
 
-    {question:"The external JavaScript file must contain the <script> tag.",
-    choices:[
-    "True",
-    "False"],
-    answer:["False"]
-    },
-
     {question:"How to write an IF statement in JavaScript?",
     choices:[
     " if x = 0 then",
@@ -62,6 +55,14 @@ testQuestions =[
 ]
 console.log(testQuestions);
 
+questionContainer = document.querySelector(".question-container");
+choicesContainer = document.querySelector(".choices-container");
+choicesDisplay = document.querySelector(".choices-display");
+choice1 = document.getElementById("choice1")
+choice2 = document.getElementById("choice2")
+choice3 = document.getElementById("choice3")
+choice4 = document.getElementById("choice4")
+
 //STARTS THE QUIZ
 function startQuiz() {
     console.log("Starting Quiz :D ");
@@ -70,21 +71,10 @@ function startQuiz() {
     button.classList.add("hide");
     firstPage.classList.add("hide");
     intervalId = setInterval(countdown, 1000);
-    
-    for (var x= 0; x <testQuestions.length;x++){
-        var displayQuestion = document.createElement("h4");
-        displayQuestion.innerText = testQuestions[x].question;
-        testing.append(displayQuestion);
-        for (var x =0; x <testQuestion.choices[x].length; x++){
-            var displayChoices = document.createElement("BUTTON");
-            displayChoices.innerText = testQuestions[x].choices;
-            testing.append(displayChoices);
-        }
-        
-       
-        
-    }
 
+
+
+ 
     
     
 
@@ -109,6 +99,21 @@ function countdown() {
  }
 
  //function to display questions and answers
+   
+//  for (var x= 0; x <testQuestions.length;x++){
+//     var displayQuestion = document.createElement("h4");
+//     displayQuestion.innerText = testQuestions[x].question;
+
+//     questionContainer.append(displayQuestion);
+// for (var x =0; x <testQuestion.length; x++){
+//     var displayChoices = document.createElement("h5");
+//     displayChoices.innerText = testQuestions[x].choices[x];
+//     choicesDisplay.append(displayChoices);
+//     }
+    
+   
+    
+// }
 
 
     
