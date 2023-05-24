@@ -9,49 +9,49 @@ let count = 3;
 //list of questions
 testQuestions =[
     {question:"inside which Element do we put the JavaScript?",
-    answers:{
-    choice1 :"<script>",
-    choice2:"<javascript>",
-    choice3:"<js>",
-    choice4:"<scripting>" }
+    answers:[
+    "<script>",
+    "<javascript>",
+    "<js>",
+    "<scripting>" ]
     },
 
     {question:"What is the correct JavaScript syntax to change the content of the HTML element below?",
-    answers:{
-    choice1 :"#demo.innerHTML = 'Hello World!;",
-    choice2:'document.getElementsByName("p").innerHTML = "Hello World!";',
-    choice3:'document.getElement("p").innerHTML = "Hello World";',
-    choice4:'document.getElementById("demo").innerHTML = "Hello World!"' }
+    answers:[
+    "#demo.innerHTML = 'Hello World!;",
+    'document.getElementsByName("p").innerHTML = "Hello World!";',
+    'document.getElement("p").innerHTML = "Hello World";',
+    'document.getElementById("demo").innerHTML = "Hello World!"' ]
     },
 
     {question:"Where is the correct place to insert a JavaScript? ",
-    answers:{
-    choice1 :"The <body> section",
-    choice2:" Both the <head> section and the <body> section are correct",
-    choice3:"The <head> section",
-    choice4:"Anywhere!" }
+    answers:[
+    "The <body> section",
+    " Both the <head> section and the <body> section are correct",
+    "The <head> section",
+    "Anywhere!" ]
     },
 
     {question:"The external JavaScript file must contain the <script> tag.",
-    answers:{
-    choice1 :"True",
-    choice2:"False"}
+    answers:[
+    "True",
+    "False"]
     },
 
     {question:"How to write an IF statement in JavaScript?",
-    answers:{
-    choice1:" if x = 0 then",
-    choice2:" if (x==0)",
-    choice3:"if x=0",
-    choice4:"if x==0 then" }
+    answers:[
+    " if x = 0 then",
+    " if (x==0)",
+    "if x=0",
+    "if x==0 then" ]
     },
 
     {question:"How can you add a comment in a JavaScript?",
-    answers:{
-    choice1 :"'This is a comment",
-    choice2:"//This is a comment",
-    choice3:"<!--This is a comment--",
-    choice4:"All of the above" }
+    answers:[
+    "'This is a comment",
+    "//This is a comment",
+    "<!--This is a comment--",
+    "All of the above" ]
     }
 ]
 console.log(testQuestions);
@@ -68,6 +68,9 @@ function startQuiz() {
         var displayQuestion = document.createElement("h4");
         displayQuestion.innerText = testQuestions[x].question;
         testing.append(displayQuestion);
+        var displayAnswers = document.createElement("h5");
+        displayAnswers.innerText = testQuestions[x].answers;
+        testing.append(displayAnswers);
         
     }
 
