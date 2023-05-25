@@ -5,8 +5,11 @@ let firstPage = document.getElementById("first-page")
 //button is listening for a click
 button.addEventListener("click",startQuiz)
 //sets count to 3
-let count = 3;
+let count = 60;
+//setting element to create to add choices in li element
+let li = document.createElement("li");
 //list of questions
+
 testQuestions =[
     {question:"inside which Element do we put the JavaScript?",
     choices:[
@@ -53,15 +56,15 @@ testQuestions =[
     answer:["//This is a comment"]
     }
 ]
-console.log(testQuestions);
 
 questionContainer = document.querySelector(".question-container");
 choicesContainer = document.querySelector(".choices-container");
+choice1 = document.getElementById("1");
+choice2 = document.getElementById("2");
+choice3 = document.getElementById("3");
+choice4 = document.getElementById("4");
 choicesDisplay = document.querySelector(".choices-display");
-choice1 = document.getElementById("choice1")
-choice2 = document.getElementById("choice2")
-choice3 = document.getElementById("choice3")
-choice4 = document.getElementById("choice4")
+
 
 //STARTS THE QUIZ
 function startQuiz() {
@@ -72,23 +75,15 @@ function startQuiz() {
     firstPage.classList.add("hide");
     intervalId = setInterval(countdown, 1000);
 
-    
+   // addEventListener
     questionContainer.innerText = testQuestions[0].question;
     choice1.innerText = testQuestions[0].choices[0];
     choice2.innerText = testQuestions[0].choices[1];
     choice3.innerText = testQuestions[0].choices[2];
     choice4.innerText = testQuestions[0].choices[3];
 
-    questionContainer.addEventListener("click",function(event){
-        if (event == testQuestions[0].question.answer) {
-            console.log("corect");
-        } else{
-            console.log("wrong");
-        }
-    });
-   
- 
     
+  
     
 
 }
@@ -103,6 +98,7 @@ function countdown() {
  
  timer.innerHTML = count;
  count--;
+ 
  if (count === 0){
     clearInterval(intervalId);
 
